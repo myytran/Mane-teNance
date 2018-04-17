@@ -7,6 +7,9 @@ deploy:
   app: ManeNance
   on:
     repo: myytran/ManeNance
-
-
-    before_script: chmod 0777 ./node_modules/.bin/mocha
+before_script: chmod 0777 ./node_modules/.bin/mocha
+before_install:
+- npm i -g npm@version-number
+env:
+  global:
+    secure: Vbuh04RJc+3HTuOvuSuh6sztXkZ/+kvRE5A+s26Ms6yjmWScWEOQ1wIG+fNkYN3d9DiZ9xz9SPCU3mvxeu38WY1WrWQmiip16U3qSLok+n1Ks4//434q9NedDqUnSUjkjUybp46cTtCdtLMXAY3YCQOtHHxcfH3z5f2gDnRWeBEhNYcg45Dmp+2w9L/pwn6a9/CqMuEDzMpqy0BxJYqdZUnk5w2xAfcv4gYTrJJT7zxXIZ1LigpRqx5Q700yLd55MsSqg5f17gSNMOXVu5nSfjgAc4VSNe46QTA/XfHo2QCwHqI+IIxMTagKlZL3e0BOjU+g2eeazmXejEVuAMjs0BjVtQIKWuQ7ICmyqCY+WJkoIR2EgOxWgeYzWxHUjDfgCHieFw7AfY1XHJOIspGG4pW3s5Kn8A4sA8TIChoD84zg60swcRKrcqGXStgYnO4+RY0JgbUEbmg0h35fJLfznl4QSbBIg6tXehWEeo7RG9HSeQWsonLkZ1uf1JS83p/TMp1FIpFDyjeZUufPiVCm1oJHMkM16pnbf9/1Cm5VEJTGumz82aC/i61iScoj+p47ldIjSU7TvAvHGGnPdWiRu9Oa8bzrq/NJeet+XF9RbQHKGxjBcHUGGNni855jttv1Hyl2PIhUnuw/sZj8eMt/vV77hY3drVCqCCugDkRDQa4=
