@@ -1,4 +1,10 @@
 //this folder contains all the ROUTES for the application
+const Service = require('./models/services'); //importing services model from services.js
+const bodyParser = require('body-parser');
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+
+
 module.exports = function(app, passport) {
 
 
@@ -35,7 +41,7 @@ module.exports = function(app, passport) {
   }));
 
     // =====================================
-    // PROFILE SECTION =====================
+    // BOOKING SECTION =====================
     // =====================================
     // we will want this protected so you have to be logged in to visit
     // we will use route middleware to verify this (the isLoggedIn function)
@@ -44,6 +50,27 @@ module.exports = function(app, passport) {
             user : req.user // get the user out of session and pass to template
         });
     });
+
+    app.post('/service', urlencodedParser, function(req,res){
+      //res.send(req.body);
+      Service.create(req.body);
+      res.send(200);
+    });
+
+    app.get('/services', function(req,res){
+      Service.find({},function(err,services){
+        res.send(services);
+      });
+    });
+    // DELETE A SERVICE with supplied
+    app.delete('/services/:id', (req, res) => {
+      Service
+        .findByIdAndRemove(req.params.id)
+        .then(Service => res.status(204).end())
+        .catch(err => res.status(500).json({ message: 'Internal server error' }));
+    });
+
+
 
 
     // =====================================

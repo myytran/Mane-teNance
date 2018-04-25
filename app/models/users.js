@@ -1,4 +1,4 @@
-//this folder is for our USERS MODEL
+//this file is for our USERS MODEL
 var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 
