@@ -1,6 +1,7 @@
 //this folder contains all the ROUTES for the application
 const Service = require('./models/services'); //importing services model from services.js
 const bodyParser = require('body-parser');
+
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
