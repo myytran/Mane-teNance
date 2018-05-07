@@ -51,7 +51,7 @@ module.exports = function(app, passport) {
             user : req.user // get the user out of session and pass to template
         });
     });
-
+//utitlizes urlencodedParser
     app.post('/service', urlencodedParser, function(req,res){
       //res.send(req.body);
       Service.create(req.body);
