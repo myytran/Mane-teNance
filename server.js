@@ -14,6 +14,9 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const flash = require('connect-flash');
 const configDB = require('./config/database.js');
+const moment = require('moment');
+moment().format();
+
 
 
 //configuration

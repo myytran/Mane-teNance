@@ -1,17 +1,15 @@
-$(document).ready(function(){
-
-$(".startButton1").click(function(){
-  $("#wm-services").show();
-});
-
-$(".startButton2").click(function(){
-  $("#men-services").show();
-});
+$( document ).ready(function() {
 
 
 
+  $('.wm-btn, .men-btn').click(function(display){
+    $("ul").toggle();
+      });
 
-
+  $('ul.wm-services li, ul.men-services li').on('click', function() {
+    $('#cart').show();
+      $(this).appendTo($(`#cart`));
+      });
 
 
 
@@ -20,15 +18,4 @@ $(".startButton2").click(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-}); //end of doc ready function
+});//end of doc ready
