@@ -1,11 +1,10 @@
-// this file is for our services models
+// file  for our services models
  const mongoose = require('mongoose');
  //creating a new schema & model for a services
  const serviceSchema = mongoose.Schema({
    name: String,
-   time: Number,
-   description: String
-   // time key using MomentJS?
+   time: Number
+
  });
 // create model for database
 const Services = mongoose.model('Services', serviceSchema);

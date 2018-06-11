@@ -3,18 +3,14 @@ var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 
 // define the schema for our user model
-// deleted other social account keys because i want to to keep this app confined to local
 var userSchema = mongoose.Schema({
 
     local: {
-        email        : String,
-        password     : String,
+        email: String,
+        password: String,
     }
 
 });
-
-
-
 // methods ======================
 // generating a hash
 userSchema.methods.generateHash = function(password) {

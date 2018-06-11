@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> MANE'TENANCE</title>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+      <script src="client.js"></script>
+      <link rel="stylesheet" href="/css/services.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">  <!--load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"><!--icon library-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--icon library-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"><!--loads Google font for H1-->
+
+
+  </head>
+<body>
+
+<div class="title-bar">
+    <h1> Hair Services </h1>
+      <div class ="logout-btn">
+        <a href="/logout" class="btn btn-default"> Logout</a>
+      </div>
+</div>
+
+<!---new template -->
+<div class="row">
+    <p><h2>The services offered at Mane'teNance range from a simple one touch styling to intricate and multi-step colors - for both men and women. Simply click on the hair services button and choose by clicking on the services! A cart will appear once you pick your first service. You may add as many as you like and delete any service as necessary. You will be able to schedule an appointment once you finish choosing your service(s) and clicking Confirm - getting one step closer to your new and  fresh look!  </h2></p>
+      <div class="column">
+          <button class="wm-btn">Women Hair Services</button>
+              <div id="wm-services">
+                <ul class="wm-services">
+                  <li data-time="45" data-price="80"> Designer Haircut</li>
+                  <li data-time="30" data-price="60">Blowdry & Style</li>
+                  <li data-time="60"data-price="150">Single Tone Color</li>
+                  <li data-time="120" data-price="125">Root Retouch Color</li>
+                  <li data-time="180" data-price="250">Full Balayage HiLights</li>
+                  <li data-time="120" data-price="200">Partial Balayage HiLights</li>
+                  <li data-time="160" data-price="225">Full Foil HiLights</li>
+                  <li data-time="140" data-price="170">Partial HiLights</li>
+                </ul>
+            </div>
+      </div>
+
+
+      <div class="column">
+      <button class="men-btn">Men Hair Services</button>
+          <div id="men-services">
+            <ul class="men-services">
+             <li data-time="30" data-price="65">Designer Haircut</li>
+             <li data-time="30" data-price="50">Barber Cut</li>
+             <li data-time="45" data-price="45">Grey Hair Blending</li>
+             <li data-time="45" data-price="50">Root Retouch Color</li>
+             <li data-time="45" data-price="60">Partial Balayage HiLights</li>
+             <li data-time="45" data-price="60">Partial HiLights</li>
+             <li data-time="45" data-price="60">Partial HiLights</li>
+             <li data-time="15" data-price="10">Clipper Clean Up</li>
+           </ul>
+            </div>
+      </div>
+
+  <div class="column">
+      <div id="cart">
+        <h4>CART</h4>
+          <ul class="cart"></ul>
+        </div>
+
+      <div id="timeSum" >
+      <p class="totalTime"></p>
+      </div>
+        <div id= "cartTimeBtn"><p>Enter the amount of Time you need.</p>
+          <form action="/schedule/time" method="post">
+            <input type="text" name="time">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+  </div>
+
+
+</div> <!--end of row div-->
+
+
+</body>
+</html>

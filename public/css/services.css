@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    position: center;
+    font-size: 30px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size:35px;
+
+
+}
+
+.title-bar {
+  margin-top: 18px;
+  height: 50px;
+  padding-top: 2px;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  background-color: Gainsboro;
+}
+
+.logout-btn {
+  position: absolute;
+  top:3.5px;
+  right: 30px;
+
+
+}
+
+h1 {
+text-align: center;
+font-size:40px;
+
+}
+
+h2  {
+  display: inline-block;
+  letter-spacing: 2px;
+  margin: 60px;
+  text-align: center;
+  font-size: 30px;
+
+}
+
+/* Style the header */
+.header {
+  position: static;
+  left: 400px;
+    background-color: #f1f1f1;
+    padding: 0;
+    text-align: center;
+    font-size: 35px;
+    width: 900px;
+}
+
+.column {
+
+    float: left;
+    text-align: center;
+    width: 33.33%;
+    padding: 20px;
+
+}
+
+.row {
+  padding: 0;
+  width: auto;
+
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#wm-services, #men-services {
+width: auto;
+}
+
+#cartTimeBtn {
+  display: none;
+}
+
+ul  {
+    list-style: none;
+    display: none;
+}
+
+ul.cart {
+  display: block;
+}
+
+li {
+  padding: 10px;
+}
+
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 1px 2px;
+}
+
+#cart , #confirm-btn, #timeSum{
+  padding: 0;
+  margin-top: 5px;
+  display: none;
+
+}
+
+#timeSum {
+
+  max-width: 300px;
+  background-color: #f1f1f1;
+  margin-left: 80px;
+  margin-bottom: 20px;
+
+
+}
+
+
+#cart li {
+padding-top: 8px;
+padding: 10px;
+list-style: none;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .row {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+}
