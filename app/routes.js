@@ -3,7 +3,8 @@ const Service = require('./models/services'); //importing services model from se
 const bodyParser = require('body-parser');
 const moment = require('moment');
 const Scheduler = require('@ssense/sscheduler').Scheduler; //npm package for use with Moment.js to book schedule
-const urlencodedParser = bodyParser.urlencoded({ extended: false })
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
+const Booking = require('./models/bookings.js');
 
 
 
@@ -72,14 +73,56 @@ module.exports = function(app, passport) {
 
 
 
-app.get('/schedule/:time', function(req, res) {
-  res.render('schedule.ejs', {output: req.params.time});
+app.get('/booking/:date/:time', isLoggedIn, function(req, res) {
+
+  Booking.create({
+    user_id: req.user._id,
+    time: req.params.time,
+    start: req.params.date
+  },function(err,data){
+    if(!err){
+      res.render('confirmation.ejs',{booking:data});
+    }
+  })
 });
 
 
 app.post('/schedule/time', function(req,res){
   var time = req.body.time;
-    res.redirect('/schedule/' + time);
+  Booking.find({},function(err,data){
+    if(!err){
+      var allocated = [];
+      for (var i = 0; i < data.length; i++) {
+        var booking = {from: moment(data[i].start).format('YYYY-MM-DD kk:mm'), duration:parseInt(data[i].time)};
+        allocated.push(booking);
+      }
+
+      const scheduler = new Scheduler();
+      const availability = scheduler.getAvailability({
+          from: moment().format('YYYY-MM-DD'),
+          to: moment().add(30,'days').format('YYYY-MM-DD'),
+          duration: time,
+          interval: 30,
+          schedule: {
+              weekdays: {
+                  from: '09:00', to: '17:00',
+                  unavailability: [
+                      { from: '12:00', to: '13:00' }
+                  ]
+              },
+              allocated: allocated
+          }
+      });
+      // res.send(availability);
+      res.render('schedule.ejs',{availability:availability,time:time});
+    }
+
+
+  });
+
+
+
+
 });
 
 

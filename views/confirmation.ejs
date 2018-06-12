@@ -27,36 +27,11 @@
 
 
 <div class="content">
-    <p><h2>Now that you selected your services, the total time is avaliable to you to schedule your appointment!  </h2></p>
-
-  <div id="schedule">
-
-    <ul class="scheduleList">
-      <% Object.keys(availability).forEach(function(key,index) { %>
-          <% for(var i=0; i<availability[key].length; i++) {%>
-            <% if(availability[key][i].available) { %>
-              <li><a href="/booking/<%=key%>T<%=availability[key][i].time%>-04:00/<%=time%>"><%=key%> - <%=availability[key][i].time %></a></li>
-            <% } %>
-          <% } %>
-      <% }); %>
-    </ul>
+    <h2>Booking Confirmed</h2>
+    <h3><%=booking.start%></h3>
+    <h4>Will Last <%=booking.time%> minutes</h4>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </div> <!--end of schedule div-->
 </div> <!--end of content div-->
 
 </body>

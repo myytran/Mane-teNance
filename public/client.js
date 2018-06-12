@@ -10,7 +10,7 @@ $( document ).ready(function() {
     $('#cart').show(); //shows cart
     $('#confirm-btn').show();//shows confirm button w/ endpoint to /Schedule
     $('#timeSum').show(); //shows time total for services
-    $('#cartTimeBtn').show(); 
+    $('#cartTimeBtn').show();
     $(this).clone().appendTo($(`.cart`)).append('<i class="glyphicon glyphicon-remove"></i>');
 
     time += $(this).data('time');
@@ -43,11 +43,13 @@ function deleteService(){
 }
 function serviceTime(totalTime){
   $('#timeSum').html(' Total Time: <span>'+ totalTime + '</span> minutes ');
+  $('input[type="hidden"]').val(totalTime);
 };
 
 function getNewTime(serviceTime) {
 time = time - serviceTime;
 $("#timeSum span").text(time);
+$('input[type="hidden"]').val(time);
 
 }
 
