@@ -29,6 +29,7 @@ body {
 
 }
 
+
 h1 {
   text-align: center;
 font-size:40px;
@@ -36,24 +37,67 @@ font-size:40px;
 }
 
 h2 {
-  display: inline-block;
+  display:block;
   letter-spacing: 2px;
-  margin: 60px;
   text-align: center;
   font-size: 30px;
 
 }
-
 content {
-  display: inline-block;
-  max-width: 800px;
+  display: block;
+  max-width: 400px;
+  padding: 10%;
   margin: 10px;
 }
+
+.confirm-content {
+border: 1px solid;
+padding: 20px;
+display: inline-block;
+width: auto;
+margin-left: 31%;
+margin-top: 60px;
+}
+
 
 p {
   margin-top: 10px;
   padding: 20px;
 }
+
+
+a.button {
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1px 6px;
+
+    font: Roboto;
+    text-rendering: auto;
+    text-align: center;
+    text-transform: none;
+    text-decoration: none;
+    text-indent: 0;
+    text-shadow: none;
+    letter-spacing: normal;
+    word-spacing: normal;
+    color: buttontext;
+
+    border: 2px outset buttonface;
+    border-image: initial;
+
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    cursor: default;
+}
+ul li{
+  display: inline-block;
+  margin:30px;
+
+}
+a.button:active {border-style: inset;}
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
     .row {

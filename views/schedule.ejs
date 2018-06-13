@@ -4,14 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> MANE'TENANCE</title>
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
+      <script src="/schedule.js"></script>
       <link rel="stylesheet" href="/css/schedule.css">
       <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
       <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!---icon library-->
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"><!--loads Google font for H1-->
 
   </head>
@@ -25,38 +28,27 @@
     </div>
 </div>
 
+  <div class="content">
+      <h2>Now that you have selected your services, below are the days and times available for you to schedule your appointment!  </h2>
 
-<div class="content">
-    <p><h2>Now that you selected your services, the total time is avaliable to you to schedule your appointment!  </h2></p>
+<div class="w3-container"> 
+  <h2>Date & Time</h2>
 
-  <div id="schedule">
-
-    <ul class="scheduleList">
-      <% Object.keys(availability).forEach(function(key,index) { %>
-          <% for(var i=0; i<availability[key].length; i++) {%>
-            <% if(availability[key][i].available) { %>
-              <li><a href="/booking/<%=key%>T<%=availability[key][i].time%>-04:00/<%=time%>"><%=key%> - <%=availability[key][i].time %></a></li>
-            <% } %>
+      <ul class="w3-ul w3-hoverable" >
+        <% Object.keys(availability).forEach(function(key,index) { %>
+        <% for(var i=0; i<availability[key].length; i++) {%>
+          <% if(availability[key][i].available) { %>
+            <li><a class= "button" href="/booking/<%=key%>T<%=availability[key][i].time%>-04:00/<%=time%>"><%=key%> - <%=availability[key][i].time %></a></li>
           <% } %>
-      <% }); %>
-    </ul>
+        <% } %>
+    <% }); %>
+
+      </ul>
+      </div>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-  </div> <!--end of schedule div-->
 </div> <!--end of content div-->
 
 </body>

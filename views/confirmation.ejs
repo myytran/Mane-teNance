@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> MANE'TENANCE</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -17,16 +18,15 @@
   </head>
 <body>
 
-<div class="title-bar">
-  <h1>Mane'teNance Schedule</h1>
-    <div class ="logout-btn">
-        <a href = "/services" class = "btn btn-default"> Back to Service Page</a>
-        <a href ="/logout" class="btn btn-default"> Logout</a>
-    </div>
-</div>
+  <div class="title-bar">
+    <h1>Mane'teNance Confirmation</h1>
+      <div class ="logout-btn">
+          <a href = "/booking/:date/:time" class = "btn btn-default"> Back to Schedule Page</a> <!---ask TJ how to link this back to Schedule page.-->
+      </div>
+  </div>
 
 
-<div class="content">
+<div class="confirm-content">
     <h2>Booking Confirmed</h2>
     <h3><%=booking.start%></h3>
     <h4>Will Last <%=booking.time%> minutes</h4>

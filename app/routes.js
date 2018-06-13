@@ -93,7 +93,7 @@ app.post('/schedule/time', function(req,res){
     if(!err){
       var allocated = [];
       for (var i = 0; i < data.length; i++) {
-        var booking = {from: moment(data[i].start).format('YYYY-MM-DD kk:mm'), duration:parseInt(data[i].time)};
+        var booking = {from: moment(data[i].start).format(' YYYY-MM-DD HH:mm '), duration:parseInt(data[i].time)};
         allocated.push(booking);
       }
 
@@ -116,12 +116,7 @@ app.post('/schedule/time', function(req,res){
       // res.send(availability);
       res.render('schedule.ejs',{availability:availability,time:time});
     }
-
-
-  });
-
-
-
+    });
 
 });
 
