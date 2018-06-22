@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> MANE'TENANCE</title>
+    <script src="/dashboard.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -19,21 +20,21 @@
 <body>
 
   <div class="title-bar">
-    <h1>Mane'teNance Confirmation</h1>
+    <h1>Mane'teNance Dashboard</h1>
       <div class ="logout-btn">
-          <a href = "/services" class = "btn btn-default"> Services Page</a>
-          <a href = "/dashboard" class = "btn btn-default"> Go to Dashboard</a>
+          <a href="/logout" class="btn btn-default"> Logout</a>
       </div>
   </div>
 
 
-<div class="confirm-content">
-    <h2>Booking Confirmed</h2>
-    <h3><%=booking.start%></h3>
-    <h4>Will Last <%=booking.time%> minutes</h4>
+  <div class="dbcontent">
+    <h2>Your total booking [s] is: <%=bookings.length%></h2>
 
+<% for(var i=0; i<bookings.length; i++) {%>
+    <li><%=bookings[i].start%> (<%=bookings[i].time%> mins)</li>
+    <% } %>
 
-</div> <!--end of content div-->
+  </div> <!--end of content div-->
 
 </body>
 </html>

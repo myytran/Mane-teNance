@@ -71,7 +71,7 @@ module.exports = function(app, passport) {
 //======================
 //this is for the schedule HOME PAGE w Post request from /services
 
-
+//get all bookings and put on dashboard
 
 app.get('/booking/:date/:time', isLoggedIn, function(req, res) {
 
@@ -84,6 +84,19 @@ app.get('/booking/:date/:time', isLoggedIn, function(req, res) {
       res.render('confirmation.ejs',{booking:data});
     }
   })
+});
+
+app.get('/dashboard', function(req, res) {
+Booking.find({
+  user_id:req.user._id,
+},function(err,data){
+  if(!err){
+      res.render('dashboard.ejs',{bookings:data} );
+  }
+})
+
+
+
 });
 
 

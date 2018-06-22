@@ -1,72 +1,378 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    position: center;
-    font-size: 28px;
-
-}
+html {
+  background: url("/images/new2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
 
 body {
+  box-sizing: border-box;
+  position: center;
+  font-size: 25px;
   font-family: 'Roboto', sans-serif;
-  background-image: url("/images/new2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 400px;
-
-
-}
+  }
 
 /* Style the content */
-.title-bar {
-  border-radius: 15px;
+
+
+.container{
+  position: absolute;
+  top: 10%;
+  display: inline-block;
+  max-width: 370px;
+  background-color: Silver;
   opacity: 0.6;
   filter: alpha(opacity=50);
-  font-family: 'Roboto', sans-serif;;
-  padding-bottom: 20px;
-  margin-top: 40px;
-  position: sticky;
-  left: 1110px;
-  background-color: Silver;
-  max-width: 370px;
-  height: auto;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  padding: 30px;
   text-align: center;
-  padding-top: 25px;
-}
+  margin-bottom: 10%;
+  margin-left: 73%;
+
+  }
+
+#mainTitle {
+  font-size:35px;
+  font-family: 'Merienda One', cursive;
+  }
 
 h1 {
   margin-top: 50px;
   font-family: 'Roboto', sans-serif;
   padding-bottom: 50px;
   font-size:40px;
-}
+  }
 
 /* Style the footer */
 .footer {
+  position: absolute;
+  display: block;
   border-radius: 20px;
   opacity: 0.5;
   filter: alpha(opacity=50);
-  padding-top: 50px;
-  padding-left: 1000px;
-  position: static;
   text-align: center;
-  width: auto;
+  bottom: 5%;
+  margin-top: 40%;
+  margin-left: 74%;
+
+}
+
+#loginFooter {
+position: absolute;
+display: block;
+bottom: 25%;
+margin-top: 40%;
+margin-left: 78%;
+
+
 }
 
 
 
 .form-group {
- max-width: 300px;
- padding-left: 70px;
+ max-width: 280px;
+ padding-left: 15px;
  text-align: left;
  }
 
 
 a.btn.btn-default {
   font-size: 25px;
-  padding: 10px;
   background-color:  Silver;
-  left: 700px;
+
+  }
+
+/*media queries */
+@media (max-width: 1060px) { /*less than or equal to 1060px*/
+  html {
+    background-size: cover;
+
+  }
+
+  .container {
+    position: absolute;
+    box-sizing: border-box;
+    max-width:650px;
+     padding: 50px;
+    margin: 10px;
+    right: 8%;
+   }
+  #mainTitle {
+     font-size: 40px;
+     padding-bottom: 30px;
+   }
+    #mainContent {
+      font-size: 37px;
+    }
+    #loginFooter {
+    position: absolute;
+    display: block;
+    bottom: 5%;
+    margin-top: 30%;
+    margin-left: 78%;
+    }
+
+  .footer {
+    position: absolute;
+    margin: auto;
+    top: 75%;
+    right: 20%;
+   }
+   a.btn.btn-default {
+     font-size: 37px;
+   }
+}
+
+
+@media (max-width: 950px) {/*closer to iPad 768 screensize*/
+  html {
+    background-size: cover;
+
+  }
+
+  .container {
+    position: absolute;
+    box-sizing: border-box;
+    max-width:570px;
+    margin: 35px;
+    padding: 20px;
+    top: 5%;
+
+
+   }
+   #mainTitle {
+     font-size: 40px;
+   }
+    #mainContent {
+      font-size: 37px;
+    }
+
+    #loginFooter {
+    position: absolute;
+    display: block;
+    bottom: 5%;
+    margin-top: 20%;
+    margin-left: 78%;
+    }
+
+   .footer {
+     position: absolute;
+     margin: auto;
+     top:85%;
+     right: 24%;
+   }
+   a.btn.btn-default {
+     font-size: 35px;
+   }
+}
+
+
+@media (max-width: 750px) {
+  html {
+    background-size: cover;
+
+  }
+
+  .container {
+    position: absolute;
+    box-sizing: border-box;
+    max-width:600px;
+     padding: 30px;
+    margin: 2px;
+
+   }
+   #mainTitle {
+     font-size: 30px;
+   }
+    #mainContent {
+      font-size: 29px;
+    }
+   .footer {
+     position: absolute;
+     margin: auto;
+     top:80%;
+     right: 16%;
+   }
+   a.btn.btn-default {
+     font-size: 28px;
+   }
+}
+
+
+
+@media (max-width: 660px) {
+  html {
+    background-size: cover;
+
+  }
+
+  .container {
+    position: absolute;
+    box-sizing: border-box;
+    max-width:550px;
+     padding: 20px;
+     margin-top: 45%;
+      margin: 55px;
+      margin-bottom: 30px;
+      margin-right: 35px;
+   }
+   #mainTitle {
+     font-size: 30px;
+   }
+    #mainContent {
+      font-size: 28px;
+    }
+   .footer {
+     position: absolute;
+     margin: auto;
+     top: 80%;
+     right: 26%;
+   }
+   a.btn.btn-default {
+     font-size: 25px;
+   }
 
 }
 
-/*LOGIN,  SIGNUP, HOME PAGE STYLING*/
+
+@media (max-width: 436px) { /* Pixel 2 */
+  html {
+    background-size: auto;
+  }
+ .container {
+   position: absolute;
+   box-sizing: border-box;
+   max-width:380px;
+   margin: 35px;
+   padding: 5px;
+   top: 2%;
+
+ }
+ #mainTitle {
+   font-size: 30px;
+ }
+  #mainContent {
+    font-size: 25px;
+  }
+  .footer {
+  position: absolute;
+  margin: auto;
+  top: 85%;
+  right: 19%;
+  }
+  a.btn.btn-default {
+    font-size: 20px;
+  }
+
+}
+@media (max-width: 376px) {  /* Iphone 6/7/8 */
+  html {
+    background-size: cover;
+  }
+  .container {
+    position: absolute;
+    box-sizing: border-box;
+    max-width: 320px;
+    margin: 35px;
+    padding: 5px;
+    top: 2%;
+
+
+  }
+  #mainTitle {
+    font-size: 25px;
+  }
+  #mainContent {
+    font-size: 22px;
+  }
+
+  .footer {
+    position: absolute;
+    margin: auto;
+    top: 92%;
+    right: 15%;
+
+  }
+  a.btn.btn-default {
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 320px) { /*iPhone 5/SE*/
+  html {
+    background-size: cover;
+  }
+  .container {
+    position: absolute;
+    box-sizing: border-box;
+    max-width: 320px;
+    margin: 35px;
+    padding: 10px;
+    top: 3%;
+
+
+  }
+  #mainTitle {
+    font-size: 20px;
+  }
+  #mainContent {
+    font-size: 18px;
+  }
+
+  .footer {
+    position: absolute;
+    margin: auto;
+    top: 90%;
+    right: 15%;
+
+  }
+  a.btn.btn-default {
+    font-size: 18px;
+  }
+
+
+  #loginFooter {
+  position: absolute;
+  display: block;
+  margin: auto;
+  bottom: 5%;
+  top: 70%;
+  right: 25%;
+
+
+  }
+
+}
+
+@media (min-width: 1700px) { /* greater than or equal to  1700px*/
+  .container {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 60px;
+    padding: 25px;
+    left: 55%;
+    top: 2%;
+
+  }
+  #mainTitle {
+    font-size: 50px;
+  }
+  #mainContent {
+    font-size: 45px;
+  }
+
+ .footer {
+   position: absolute;
+   margin: auto;
+   top: 58%;
+   right: 10%;
+  }
+
+  a.btn.btn-default {
+    font-size: 35px;
+  }
+
+}
