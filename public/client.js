@@ -2,35 +2,21 @@ $( document ).ready(function() {
 
   var time = 0;
 
-  $('.wm-btn, .men-btn').click(function(e){ //toggles service menus
-         $(this).siblings("div").children("ul").toggle();
+  $('ul.wm-services, ul.men-services').on('click', 'li', function() { //show cart when li is selected
+ $('#cart').show();
+   $('#confirm-btn').show();//shows confirm button w/ endpoint to /Schedule
+   $('#timeSum').show(); //shows time total for services
+   $('#cartTimeBtn').show();
+   $(this).clone().appendTo($(`.cart`)).append('<i class="glyphicon glyphicon-remove"></i>');
+
+
    });
 
-  $('ul.wm-services, ul.men-services').on('click', 'li', function() { //show cart when li is selected
-    shows cart('#cart').show();
-    $('#confirm-btn').show();//shows confirm button w/ endpoint to /Schedule
-    $('#timeSum').show(); //shows time total for services
-    $('#cartTimeBtn').show();
-    $(this).clone().appendTo($(`.cart`)).append('<i class="glyphicon glyphicon-remove"></i>');
-
-    time += $(this).data('time');
-
-//clear out cart if Time = 0
-  //  if(time) = 0){
-  //   $('#timeSum').val([]);
-    //} else {
-    //  alert('You must select a service to proceed!');
-    //}
-    serviceTime(time);
-    deleteService();
 
 
 
 
 
-
-
-});
 
 
 //functions
