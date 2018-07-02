@@ -3,11 +3,11 @@ $( document ).ready(function() {
   var time = 0;
 
   $('.wm-btn, .men-btn').click(function(e){ //toggles service menus
-        $(this).siblings("div").children("ul").toggle();
-  });
+         $(this).siblings("div").children("ul").toggle();
+   });
 
   $('ul.wm-services, ul.men-services').on('click', 'li', function() { //show cart when li is selected
-    $('#cart').show(); //shows cart
+    shows cart('#cart').show();
     $('#confirm-btn').show();//shows confirm button w/ endpoint to /Schedule
     $('#timeSum').show(); //shows time total for services
     $('#cartTimeBtn').show();
