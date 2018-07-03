@@ -3,21 +3,17 @@ $( document ).ready(function() {
   var time = 0;
 
   $('ul.wm-services, ul.men-services').on('click', 'li', function() { //show cart when li is selected
- $('#cart').show();
-   $('#confirm-btn').show();//shows confirm button w/ endpoint to /Schedule
-   $('#timeSum').show(); //shows time total for services
-   $('#cartTimeBtn').show();
-   $(this).clone().appendTo($(`.cart`)).append('<i class="glyphicon glyphicon-remove"></i>');
+    $('#cart').show();
+    $('#confirm-btn').show();//shows confirm button w/ endpoint to /Schedule
+    $('#timeSum').show(); //shows time total for services
+    $('#cartTimeBtn').show();
+    $(this).clone().appendTo($(`.cart`)).append('<i class="glyphicon glyphicon-remove"></i>');
 
+   time += $(this).data('time');
 
+      serviceTime(time);
+      deleteService();
    });
-
-
-
-
-
-
-
 
 //functions
 function deleteService(){

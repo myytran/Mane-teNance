@@ -9,31 +9,37 @@
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="/css/schedule.css">
-      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!---icon library-->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">  <!--load bootstrap css -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"><!--icon library-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--icon library-->
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"><!--loads Google font for H1-->
-
+      <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+      <link rel="stylesheet" href="/css/schedule.css">
   </head>
 <body>
 
-  <div class="title-bar">
-    <h1>Mane'teNance Confirmation</h1>
-      <div class ="logout-btn">
-          <a href = "/services" class = "btn btn-default"> Services Page</a>
-          <a href = "/dashboard" class = "btn btn-default"> Go to Dashboard</a>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header" id="overide-nav-header">
+        <h1>Mane'tenance | Confirmation</h1>
       </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href = "/services"> <span class="glyphicon glyphicon-arrow-left"></span>Service Page</a></li>
+          <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron" id="overide-jumbotron-confirm">
+    <div class="container text-center" id="container-overide-confirm-page">
+      <h2>Booking Confirmed</h2>
+      <h3><%=booking.start%></h3>
+      <h4>Will Last <%=booking.time%> minutes</h4>
+
   </div>
-
-
-<div class="confirm-content">
-    <h2>Booking Confirmed</h2>
-    <h3><%=booking.start%></h3>
-    <h4>Will Last <%=booking.time%> minutes</h4>
-
-
-</div> <!--end of content div-->
+</div>
 
 </body>
 </html>

@@ -10,30 +10,40 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
       <script src="/schedule.js"></script>
-      <link rel="stylesheet" href="/css/schedule.css">
-      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!---icon library-->
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">  <!--load bootstrap css -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"><!--icon library-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--icon library-->
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"><!--loads Google font for H1-->
-
+      <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+      <link rel="stylesheet" href="/css/schedule.css">
   </head>
 <body>
 
-<div class="title-bar">
-  <h1>Mane'teNance Schedule</h1>
-    <div class ="logout-btn">
-        <a href = "/services" class = "btn btn-default"> Back to Service Page</a>
-        <a href ="/logout" class="btn btn-default"> Logout</a>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid" id="schedule-container-fluid">
+      <div class="navbar-header" id="overide-nav-header">
+        <h1>Mane'tenance | Hair Schedule</h1>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href = "/services"> <span class="glyphicon glyphicon-arrow-left"></span>Service Page</a></li>
+          <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+      </div>
     </div>
-</div>
+  </nav>
 
-  <div class="content">
-      <h2>Now that you have selected your services, below are the days and times available for you to schedule your appointment!  </h2>
+<div class="jumbotron" id="overide-jumbotron-schedule">
+  <div class="container text-center" id="container-overide-schedule-page">
+  <p>Now that you have selected your services, below are the days and times available for you to schedule your appointment! Simply select by clicking on the appropriate time and day for your hair appointment and you will be directed to a confirmation page of your Mane'tenance schedule!  </p>
 
-<div class="columns">
-  <section>
-  <h2>Date & Time</h2>
+
+  </div><!--containertextcenter-->
+
+
+  <div class="columns" id="schedule-board">
+    <section>
+    <h2>Dates & Times available</h2>
       <ul class="w3-ul w3-hoverable" >
           <% Object.keys(availability).forEach(function(key,index) { %>
         <% for(var i=0; i<availability[key].length; i++) {%>
@@ -42,16 +52,10 @@
           <% } %>
         <% } %>
     <% }); %>
-</ul>
-</section>
-
-
-      </div>
-
-
-
-
-</div> <!--end of content div-->
+      </ul>
+    </section>
+  </div>
+</div> <!--jumbotron-->
 
 </body>
 </html>

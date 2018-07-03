@@ -13,28 +13,6 @@ body {
 
 }
 
-.title-bar {
-  margin-top: 18px;
-  height: 50px;
-  padding-top: 2px;
-  position: relative;
-  font-family: 'Roboto', sans-serif;
-  background-color: Gainsboro;
-}
-
-.logout-btn {
-  position: absolute;
-  top:3.5px;
-  right: 30px;
-
-
-}
-
-.navbar {
- margin-bottom: 0;
- border-radius: 0;
-}
-
 #overide-jumbotron {
   margin: 0;
 }
@@ -51,16 +29,19 @@ color: whitesmoke;
   margin-bottom: 40px;
 }
 
-#overide-row-services p{
+#overide-row-pics p{
   margin-right: 30px;
   font-family: 'Merienda One', cursive;
-  font-size: 20px;
+  font-size: 25px;
 }
 
-#overide-row-services .img-responsive {
-  border-style: 1px solid;
+#overide-row-services h2{
+  font-family: 'Merienda One', cursive;
+  font-size:30px;
+  text-align: center;
+  color: whitesmoke;
+  background-color: black;
 }
-
 
 #women-menu-overide{
   width:500px;
@@ -70,7 +51,6 @@ color: whitesmoke;
   border-style: solid;
   margin-left: 30px;
   margin: 2px;
-
 }
 
 #men-menu-overide {
@@ -87,7 +67,7 @@ color: whitesmoke;
   width:500px;
   height: 610px;
   border: 4px solid;
-  text-align: left;
+  text-align: center;
   padding-left: 30px;
   margin-left: 10px;
 }
@@ -95,32 +75,11 @@ color: whitesmoke;
 
 
 /* Style the header */
-.header {
-  position: static;
-  left: 400px;
-    background-color: #f1f1f1;
-    padding: 0;
-    text-align: center;
-    font-size: 35px;
-    width: 900px;
-}
 
-.column {
-  background-color: #9896A4;
-  border: solid 1px;
-    float: left;
-    text-align: center;
-    width: 33.33%;
-    padding: 20px;
-    margin: 5px;
-
-}
 
 .row {
-
-  padding: 0;
-  width: auto;
-
+padding: 0;
+width: auto;
 }
 
 .row:after {
@@ -138,7 +97,7 @@ width: auto;
 }
 
 ul  {
-    list-style: none;
+  list-style: none;
 
 }
 ul.cart {
@@ -159,19 +118,25 @@ li {
 
 }
 
-#timeSum {
-
-  max-width: 300px;
-  background-color: #f1f1f1;
-  margin-left: 80px;
-  margin-bottom: 20px;
+.totalTime p{
+font-size: 25px;
 
 
 }
-
 
 #cart li {
 padding-top: 8px;
 padding: 10px;
 list-style: none;
+}
+
+#cartTimeBtn p{
+  font-size: 23px;
+}
+
+#cartTimeBtn button{
+  border-radius: 12px;
+  font-size: 22px;
+  background-color: white;
+  color: black;
 }

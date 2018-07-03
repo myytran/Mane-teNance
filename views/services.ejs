@@ -8,15 +8,13 @@
      src="https://code.jquery.com/jquery-3.3.1.min.js"
      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
      crossorigin="anonymous"></script>
-<script src="client.js"></script>
+    <script src="client.js"></script>
      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">  <!--load bootstrap css -->
    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"><!--icon library-->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--icon library-->
  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"><!--loads Google font for H1-->
  <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
  <link rel="stylesheet" href="/css/services.css">
-
-
 </head>
 <body>
 
@@ -36,12 +34,12 @@
 <div class="jumbotron" id="overide-jumbotron">
   <div class="container text-center" id="container-overide-service-page">
 
-    <p>The services offered at Mane'teNance range from a simple one touch styling to intricate and multi-step colors - for both men and women. Simply click on the hair services button and choose by clicking on the services! A cart will appear once you pick your first service. You may add as many as you like and delete any service as necessary. You will be able to schedule an appointment once you finish choosing your service(s) and clicking Confirm - getting one step closer to your new and  fresh look! </p>
+    <p>The services offered at Mane'teNance range from a simple one touch styling to intricate and multi-step colors - for both men and women. Simply click on each service to choose! Selected items will appear in the cart and you can modify as needed, time allotted for each service will populate your cart as well.You will be able to schedule an appointment once you finish choosing your service(s) and clicking Confirm - getting one step closer to your new and  fresh look! </p>
   </div>
 
   <div class="container-fluid bg-3 text-center" id="overide-bg3-container">
 
-    <div class="row" id="overide-row-services">
+    <div class="row" id="overide-row-pics">
       <div class="col-sm-3">
         <p>Precision Haircuts</p>
         <img src="http://localhost:8080/images/cut1.jpg" class="img-responsive" style="width:80%" alt="Image" >
@@ -62,9 +60,9 @@
   </div>
   <br>
 
-  <div class= "row">
+  <div class= "row" id="overide-row-services">
   <div class="col-sm-4" id="women-menu-overide">
-    <h2 id="services-bar">Women Hair Services</h2>
+    <h2>Women Hair Services</h2>
                 <div id="wm-services">
                   <ul class="wm-services">
                     <li data-time="45" data-price="80"> Designer Haircut</li>
@@ -79,7 +77,7 @@
               </div>
             </div> <!--end of first column div-->
   <div class="col-sm-4" id="men-menu-overide">
-      <h2 id="services-bar">Men Hair Services</h2>
+      <h2>Men Hair Services</h2>
           <div id="men-services">
             <ul class="men-services">
              <li data-time="30" data-price="65">Designer Haircut</li>
@@ -95,9 +93,22 @@
         </div>
   <div class="col-sm-4" id="cart-overide">
       <div id="cart">
-        <h2 id="services-bar">CART</h2>
+        <h2>~CART~</h2>
           <ul class="cart"></ul>
         </div>
+
+        <div id="timeSum" >
+        <p class="totalTime"></p>
+        </div>
+          <div id= "cartTimeBtn"><p>Please confirm your service time needed.</p>
+            <form action="/schedule/time" method="post">
+              <input type="hidden" name="time">
+              <button type="submit">Confirm</button>
+            </form>
+          </div>
+
+
+
       </div>
     </div> <!--end of row div-->
 
