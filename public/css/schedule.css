@@ -10,10 +10,28 @@ body {
   font-size:20px;
 
 }
+#schedule-nav, #confirm-nav {
+height: auto;
+
+}
+#overide-jumbotron-confirm, #overide-jumbotron-db {
+  background: none;
+}
+
+#container-overide-confirm-page {
+  margin-top: 40px;
+   box-shadow: 10px 8px;
+   border: 4px solid;
+}
 
 #overide-jumbotron-schedule {
   margin: 0;
 }
+#container-overide-confirm-page strong {
+  font-size: 28px;
+}
+
+
 
 #overide-nav-header h1 {
   font-family: 'Merienda One', cursive;
@@ -32,25 +50,25 @@ text-align: center;
 color: whitesmoke;
 background-color: black;
 }
+/* confirm styling*/
+#overide-nav-header-confirm, #overide-nav-header-db h1{
+font-family: 'Merienda One', cursive;
+color: whitesmoke;
+}
 
+#confirm-right-nav, #schedule-right-nav, #db-right-nav  a {
+  font-size: 20px;
 
+}
 
 
 /* dashboard styling*/
-.dbcontent li {
+#container-overide-db li {
+  border: 4px solid;
   display: block;
   margin: 1%;
   padding: 1%;
   margin-left:20%;
-}
-
-.confirm-content {
-border: 1px solid;
-padding: 20px;
-display: inline-block;
-width: auto;
-margin-left: 31%;
-margin-top: 60px;
 }
 
 

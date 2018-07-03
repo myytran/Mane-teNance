@@ -4,37 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> MANE'TENANCE</title>
-    <script src="/dashboard.js"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="/css/schedule.css">
-      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!---icon library-->
+      <script src="/dashboard.js"></script>
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">  <!--load bootstrap css -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"><!--icon library-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--icon library-->
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"><!--loads Google font for H1-->
-
-  </head>
+      <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+      <link rel="stylesheet" href="/css/schedule.css">
+</head>
 <body>
 
-  <div class="title-bar">
-    <h1>Mane'teNance Dashboard</h1>
-      <div class ="logout-btn">
-          <a href="/logout" class="btn btn-default"> Logout</a>
+  <nav class="navbar navbar-inverse" id="db-nav">
+    <div class="container-fluid" >
+      <div class="navbar-header" id="overide-nav-header-db">
+        <h1>Mane'tenance | Dashboard</h1>
       </div>
+      <div class="collapse navbar-collapse" id="db-right-nav">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href = "/services">Service Page</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron" id="overide-jumbotron-db">
+    <div class="container text-center" id="container-overide-db">
+  <strong>Your total booking [s] is: <%=bookings.length%></strong>
+      <h3><% for(var i=0; i<bookings.length; i++) {%>
+          <li><%=bookings[i].start%> (<%=bookings[i].time%> mins)</li>
+          <% } %></h3>
+
+
   </div>
-
-
-  <div class="dbcontent">
-    <h2>Your total booking [s] is: <%=bookings.length%></h2>
-
-<% for(var i=0; i<bookings.length; i++) {%>
-    <li><%=bookings[i].start%> (<%=bookings[i].time%> mins)</li>
-    <% } %>
-
-  </div> <!--end of content div-->
-
+</div>
 </body>
 </html>

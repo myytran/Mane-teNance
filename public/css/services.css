@@ -8,9 +8,6 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size:20px;
-
-
-
 }
 
 #overide-jumbotron {
@@ -21,6 +18,10 @@ body {
   font-family: 'Merienda One', cursive;
 color: whitesmoke;
 
+}
+
+#services-right-nav span, a {
+  font-size: 20px;
 }
 
 #container-overide-service-page p {
