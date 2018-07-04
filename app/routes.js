@@ -88,7 +88,7 @@ app.get('/booking/:date/:time', isLoggedIn, function(req, res) {
 
 app.get('/dashboard', function(req, res) {
 Booking.find({
-  user_id:req.user._id,
+  user_id: req.user._id,
 },function(err,data){
   if(!err){
       res.render('dashboard.ejs',{bookings:data} );
@@ -127,7 +127,7 @@ app.post('/schedule/time', function(req,res){
           }
       });
       // res.send(availability);
-      res.render('schedule.ejs',{availability:availability,time:time});
+      res.render('schedule.ejs',{availability:availability,time:time, moment: moment});
     }
     });
 

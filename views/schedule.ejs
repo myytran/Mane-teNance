@@ -48,7 +48,7 @@
           <% Object.keys(availability).forEach(function(key,index) { %>
         <% for(var i=0; i<availability[key].length; i++) {%>
           <% if(availability[key][i].available) { %>
-            <li><a class= "button" href="/booking/<%=key%>T<%=availability[key][i].time%>-04:00/<%=time%>"><%=key%> - <%=availability[key][i].time %></a></li>
+            <li><a class= "button" href="/booking/<%=key%>T<%=availability[key][i].time%>-04:00/<%=time%>"><%=moment(key).format("dddd, MMMM DD, YYYY")%> - <%=availability[key][i].time %></a></li>
           <% } %>
         <% } %>
     <% }); %>
