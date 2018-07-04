@@ -1,29 +1,33 @@
 <!doctype html>
 <html>
 <head>
-    <title>MANE'TENANCE</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MANE'TENANCE</title>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"><!-- load fontawesome -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"><!--loads Google font for H1-->
     <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
     <link rel="stylesheet" href="/css/client.css">
     <script src="client.js"></script>
 </head>
-<body>
-  <div class="container" id="signup_pg">
-    <p id="mainTitle">SIGN UP</p>
-    <p id="mainContent">Make an account with an email and password to ensure  access to your stylist's schedule and much more!</p>
+
+<body class="row">
+
+  <div class="col l4 offset-l8 m6 offset-m6; center-align" id="signup_pg">
+    <h1  id="signupTitle">SIGN UP</h1>
+    <p>Make an account with an email and password to ensure  access to your stylist's schedule and much more!</p>
 
   <!-- show any messages that come back with authentication -->
       <% if (message.length > 0) { %>
           <div class="alert alert-danger"><%= message %></div>
       <% } %>
 
-      <!-- LOGIN FORM -->
+      <!--SIGNUP FORM -->
       <form action="/signup" method="post">
           <div class="form-group">
               <label>Email</label>
@@ -37,12 +41,15 @@
           <button type="submit" class="btn btn-warning btn-lg">Signup</button>
       </form>
   </div>
-  <div class="footer" id="signupfooter">
-      <p> <a href="/login" class="btn btn-default">Login</a>
-         <a href="/" class="btn btn-default">Home</a></p>
+
+
+  <div class="row" id="signupfooter" style="margin-left: 73%;">
+    <div class="col s12">
+      <a href="/login" class="btn btn-default">Login</a>
+         <a href="/" class="btn btn-default">Home</a>
+    </div>
   </div>
-
-
-
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 </body>
 </html>

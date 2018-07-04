@@ -8,448 +8,55 @@ html {
 
 body {
   box-sizing: border-box;
-  position: center;
-  font-size: 25px;
-  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
   }
 
 /* Style the content */
-.container{
-  position: absolute;
-  top: 10%;
+
+#indexTitle,#indexTitle, #signupTitle {
+  font-size:22px;
+  text-align: center;
+
+  }
+
+  p {
+    font-size: 20px;
+    max-width: 480px;
+    padding: 8px;
+}
+
+
+#indexContainer, #loginpg, #signup_pg {
+  background-color: #d7ccc8;
+  width: 450px;
+  margin-top: 1%;
   display: inline-block;
-  max-width: 370px;
-  background-color: Silver;
+  height: auto;
   opacity: 0.6;
   filter: alpha(opacity=50);
   border-radius: 10px;
-  font-family: 'Roboto', sans-serif;
-  padding: 30px;
+  padding: 8px;
   text-align: center;
-  margin-bottom: 10%;
-  margin-left: 73%;
-
-  }
-
-#mainTitle {
-  font-size:35px;
-  font-family: 'Merienda One', cursive;
-  }
-
-#services-par p {
-  font-size: 40px;
 }
-
-h1 {
-  margin-top: 50px;
-  font-family: 'Roboto', sans-serif;
-  padding-bottom: 50px;
-  font-size:40px;
-  color: whitesmoke;
-  }
-
-/* bootstrap overide section */
-#bootstrap-overide-jumbotron  p{
-  
-}
-#overide-nav-header h1 {
-  font-color: whitesmoke;
-}
-
 /* Style the footer */
-.footer {
-  position: absolute;
-  display: block;
+#indexFooter, #signupfooter {
+display: inline-block;
   border-radius: 20px;
   opacity: 0.5;
   filter: alpha(opacity=50);
   text-align: center;
-  bottom: 5%;
-  margin-top: 40%;
-  margin-left: 74%;
+  margin-top: 10px;
 
 }
 
-#loginFooter {
-position: absolute;
-display: block;
-bottom: 25%;
-margin-top: 40%;
-margin-left: 78%;
-
-
+.form-group label {
+  font-size: 20px;
+  color: black;
 }
 
 
-
-.form-group {
- max-width: 280px;
- padding-left: 15px;
- text-align: left;
- }
-
-
-a.btn.btn-default {
-  font-size: 25px;
+a.btn.btn-default{
+  font-size: 20px;
+  color: black;
   background-color:  Silver;
-
-  }
-
-/*media queries */
-@media (max-width: 1060px) { /*less than or equal to 1060px*/
-  html {
-    background-size: cover;
-
-  }
-
-  .container {
-    position: absolute;
-    box-sizing: border-box;
-    max-width:650px;
-     padding: 50px;
-    margin: 10px;
-    right: 8%;
-   }
-
-   #loginpg {
-     position: absolute;
-     box-sizing: border-box;
-     max-width:570px;
-     margin: 35px;
-     padding: 26px;
-
-
-   }
-
-  #mainTitle {
-     font-size: 40px;
-     padding-bottom: 30px;
-   }
-    #mainContent {
-      font-size: 37px;
-    }
-
-    .form-group {
-    margin: auto;
-     max-width: 280px;
-     padding-left: 15px;
-     text-align: left;
-     }
-
-  .footer {
-    position: absolute;
-    margin: auto;
-    top: 75%;
-    right: 20%;
-   }
-   a.btn.btn-default {
-     font-size: 37px;
-   }
-
-  #loginFooter {
-     position: absolute;
-    display: block;
-    margin: auto;
-    bottom: 5%;
-    top: 45%;
-    right: 23%;
-     }
-}
-
-
-@media (max-width: 950px) {/*closer to iPad 768 screensize*/
-  html {
-    background-size: cover;
-
-  }
-
-  .container {
-    position: absolute;
-    box-sizing: border-box;
-    max-width:570px;
-    margin: 35px;
-    padding: 20px;
-    top: 5%;
-  }
-
-  #loginpg {
-    position: absolute;
-    box-sizing: border-box;
-    max-width:370px;
-    margin: 35px;
-    padding: 10px;
-    top: 5%;
-
-  }
-   #mainTitle {
-     font-size: 40px;
-   }
-    #mainContent {
-      font-size: 37px;
-    }
-
-    #loginFooter {
-    position: absolute;
-    display: block;
-    margin: auto;
-    bottom: 5%;
-    top: 55%;
-    right: 18%;
-  }
-
-   .footer {
-     position: absolute;
-     margin: auto;
-     top:85%;
-     right: 24%;
-   }
-   a.btn.btn-default {
-     font-size: 35px;
-   }
-}
-
-
-@media (max-width: 750px) {
-  html {
-    background-size: cover;
-
-  }
-
-  .container {
-    position: absolute;
-    box-sizing: border-box;
-    max-width:600px;
-     padding: 30px;
-    margin: 2px;
-
-   }
-   #mainTitle {
-     font-size: 30px;
-   }
-    #mainContent {
-      font-size: 29px;
-    }
-   .footer {
-     position: absolute;
-     margin: auto;
-     top:80%;
-     right: 16%;
-   }
-   a.btn.btn-default {
-     font-size: 28px;
-   }
-}
-
-
-
-@media (max-width: 660px) {
-  html {
-    background-size: cover;
-
-  }
-
-  .container {
-    position: absolute;
-    box-sizing: border-box;
-    max-width:550px;
-     padding: 20px;
-     margin-top: 45%;
-      margin: 55px;
-      margin-bottom: 30px;
-      margin-right: 35px;
-   }
-   #mainTitle {
-     font-size: 30px;
-   }
-    #mainContent {
-      font-size: 28px;
-    }
-   .footer {
-     position: absolute;
-     margin: auto;
-     top: 80%;
-     right: 26%;
-   }
-   a.btn.btn-default {
-     font-size: 25px;
-   }
-
-}
-
-
-@media (max-width: 436px) { /* Pixel 2 */
-  html {
-    background-size: auto;
-  }
- .container {
-   position: absolute;
-   box-sizing: border-box;
-   max-width:380px;
-   margin: 35px;
-   padding: 5px;
-   top: 2%;
-
- }
- #mainTitle {
-   font-size: 30px;
- }
-  #mainContent {
-    font-size: 25px;
-  }
-  .footer {
-  position: absolute;
-  margin: auto;
-  top: 85%;
-  right: 19%;
-  }
-  a.btn.btn-default {
-    font-size: 25px;
-  }
-
-  #loginFooter {
-  position: absolute;
-  display: block;
-  margin: auto;
-  bottom: 5%;
-  top: 65%;
-  right: 25%;
-
-
-  }
-
-}
-@media (max-width: 376px) {  /* Iphone 6/7/8 */
-  html {
-    background-size: cover;
-  }
-  .container {
-    position: absolute;
-    box-sizing: border-box;
-    max-width: 320px;
-    margin: 35px;
-    padding: 5px;
-    top: 2%;
-  }
-
-#signup_pg {
-  position: absolute;
-  box-sizing: border-box;
-  max-width: 320px;
-  margin: 35px;
-  padding: 5px;
-  top: 2%;
-
-}
-  #mainTitle {
-    font-size: 25px;
-  }
-  #mainContent {
-    font-size: 25px;
-  }
-
-  .footer {
-    position: absolute;
-    margin: auto;
-    top: 92%;
-    right: 15%;
-
-  }
-  a.btn.btn-default {
-    font-size: 25px;
-  }
-
-  #loginFooter {
-  position: absolute;
-  display: block;
-  margin: auto;
-  bottom: 5%;
-  top: 70%;
-  right: 25%;
-}
-
-  #signupfooter {
-    position: absolute;
-    display: block;
-    margin: auto;
-    top: 80%;
-    right: 25%;
-
-  }
-
-}
-
-@media (max-width: 320px) { /*iPhone 5/SE*/
-  html {
-    background-size: cover;
-  }
-  .container {
-    position: absolute;
-    box-sizing: border-box;
-    max-width: 320px;
-    margin: 35px;
-    padding: 10px;
-    top: 3%;
-
-
-  }
-  #mainTitle {
-    font-size: 20px;
-  }
-  #mainContent {
-    font-size: 18px;
-  }
-
-  .footer {
-    position: absolute;
-    margin: auto;
-    top: 90%;
-    right: 15%;
-
-  }
-  a.btn.btn-default {
-    font-size: 18px;
-  }
-
-
-  #loginFooter {
-  position: absolute;
-  display: block;
-  margin: auto;
-  bottom: 5%;
-  top: 80%;
-  right: 25%;
-
-
-  }
-
-}
-
-@media (min-width: 1700px) { /* greater than or equal to  1700px*/
-  .container {
-    position: absolute;
-    box-sizing: border-box;
-    margin: 60px;
-    padding: 25px;
-    left: 55%;
-    top: 2%;
-
-  }
-  #mainTitle {
-    font-size: 50px;
-  }
-  #mainContent {
-    font-size: 45px;
-  }
-
- .footer {
-   position: absolute;
-   margin: auto;
-   top: 58%;
-   right: 10%;
-  }
-
-  a.btn.btn-default {
-    font-size: 35px;
-  }
-
 }
