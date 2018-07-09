@@ -4,43 +4,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> MANE'TENANCE</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
       <script src="/dashboard.js"></script>
-      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">  <!--load bootstrap css -->
-      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"><!--icon library-->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--icon library-->
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"><!--loads Google font for H1-->
-      <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
       <link rel="stylesheet" href="/css/schedule.css">
 </head>
 <body>
 
-  <nav class="navbar navbar-inverse" id="db-nav">
-    <div class="container-fluid" >
-      <div class="navbar-header" id="overide-nav-header-db">
-        <h1>Mane'tenance | Dashboard</h1>
-      </div>
-      <div class="collapse navbar-collapse" id="db-right-nav">
-        <ul class="nav navbar-nav navbar-right">
+  <nav>
+      <div class="nav-wrapper" id="nav-schedule">
+        <h3 class="brand-logo center">Mane'tenance | Dashboard</h3>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href = "/services">Service Page</a></li>
           <li><a href="/logout">Logout</a></li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <div class="jumbotron" id="overide-jumbotron-db">
-    <div class="container text-center" id="container-overide-db">
-  <strong>Your total booking [s] is: <%=bookings.length%></strong>
+
+  <div class="container" id="container-db">
+
+      <center><h3>Your total booking [s] is: <%=bookings.length%></h3></center>
       <h3><% for(var i=0; i<bookings.length; i++) {%>
           <li><%=bookings[i].start%> (<%=bookings[i].time%> mins)</li>
           <% } %></h3>
-
-
-  </div>
 </div>
+
+<!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
