@@ -44,12 +44,12 @@
     <h2>Dates & Times available</h2>
       <ul class="w3-ul w3-hoverable" >
           <% Object.keys(availability).forEach(function(key,index) { %>
-        <% for(var i=0; i<availability[key].length; i++) {%>
-          <% if(availability[key][i].available) { %>
-            <li><a class= "button" href="/booking/<%=key%>T<%=availability[key][i].time%>-04:00/<%=time%>"><%=moment(key).format("dddd, MMMM DD, YYYY")%> - <%=availability[key][i].time %></a></li>
-          <% } %>
-        <% } %>
-    <% }); %>
+            <% for(var i=0; i<availability[key].length; i++) {%>
+              <% if(availability[key][i].available) { %>
+                <li><a class= "button" style="background-color: #eceff1;" href="/booking/<%=key%>T<%=availability[key][i].time%>-04:00/<%=time%>"><%=moment(key).format("dddd, MMMM Do, YYYY,  hh:mm A")%> - <%=availability[key][i].time%></a></li>
+              <% } %>
+            <% } %>
+          <% }); %>
       </ul>
     </section>
   </div>

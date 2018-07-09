@@ -7,7 +7,7 @@ $( document ).ready(function() {
     $('#confirm-btn').show();//shows confirm button w/ endpoint to /Schedule
     $('#timeSum').show(); //shows time total for services
     $('#cartTimeBtn').show();
-    $(this).clone().appendTo($(`.cart`)).append('<i class="glyphicon glyphicon-remove"></i>');
+    $(this).clone().appendTo($(`.cart`)).append('<i class="small material-icons">clear</i>');
 
    time += $(this).data('time');
 
@@ -17,7 +17,7 @@ $( document ).ready(function() {
 
 //functions
 function deleteService(){
-  $('.cart').off().on('click','i.glyphicon-remove',function(e) {
+  $('.cart').off().on('click','i.material-icons',function(e) {
     var serviceTime= parseInt($(this).parent().attr('data-time'));
     $(this).parent().remove();
     getNewTime(serviceTime); //calls function to update new time

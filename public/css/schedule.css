@@ -45,13 +45,10 @@ text-align: center;
 color: whitesmoke;
 background-color: black;
 }
-/* confirm styling*/
-#overide-nav-header-confirm, #overide-nav-header-db h1{
-font-family: 'Montserrat', sans-serif;
-color: whitesmoke;
+
+#schedule-board li {
+  margin: 10px;
 }
-
-
 /* =========dashboard styling============*/
 #container-db li {
   border: 4px solid;
