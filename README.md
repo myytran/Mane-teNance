@@ -1,6 +1,6 @@
-Mane-teNance was created as part of a Node Capstone for ThinkFul. It contains different technologies for development like NodeJS, Mongo and Mongoose for the backend. Embedded JavaScript templates, MomentJS and Materialize as the front-end framework for responsive User Interface.
+Mane-teNance was created as part of a Node Capstone for ThinkFul. It contains different technologies for development like NodeJS, Mongo and Mongoose for the backend. Embedded JavaScript templating, MomentJS and Materialize as the front-end framework for responsive User Interface.
 
-I created this app to 
+I created this app with the idea and inspiration from my part-time job as a hairstylist and freelance bridal artist. I needed a way to keep all my clients together and track their services. I hope to continually add and refine this app further but so far, the idea is really great and so necessary for the freelance hairstylists out there. 
 
 This app provides users with an informative list of services from their hairdresser and allows them to schedule their appointments with available time slots. 
 
