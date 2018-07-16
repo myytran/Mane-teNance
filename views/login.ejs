@@ -10,43 +10,50 @@
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"><!--loads Google font for H1-->
-  <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+    <script src="client.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="/css/client.css">
-  <script src="client.js"></script>
 </head>
 
-<body class="row">
-
-    <div class="col l4 offset-l8 m6 offset-m6" id="loginpg">
-        <h1 class="left-align" id="indexTitle">LOG IN TO GET STARTED!</h1>
-        <p>To make the most out of your maintenance appointments, please log in to your account! This allows you to have your previous services right in your dashboard! If you would just like to browse the contents, simply utilize the Demo account!</p>
-          <div class="center-align" style="text-decoration: underline;"><h6>Email: demo@gmail.com</h6>
-           <h6>Password: demo</h6></div>
-  <% if (message.length > 0) { %>
-            <div class="alert alert-danger"><%= message %></div>
-        <% } %>
-        <form action="/login" method="post">
-            <div class="form-group">
-                <label>Email</label>
-                <input type="text" class="form-control" name="email">
+<body>
+        <div id="bgPicture"></div><!--div for background picture-->
+          <div class="container"  id="loginContent">
+          <h1 id="loginTitle">LOG IN</h1>
+            <div id="loginContent">
+              <section class="row">
+                <b>~Try it out!~</b>
+                <br>
+              <b>Email:</b> demo@gmail.com
+              <br>
+              <b>Password:</b> demo
+            </section>
             </div>
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" class="form-control" name="password">
-            </div>
-        <button type="submit" class="btn btn-warning btn-lg">Login</button>
-        </form>
+                  <% if (message.length > 0) { %>
+               <div class="alert alert-danger"><%= message %></div>
 
-  </div>
+           <% } %>
+           <section class="row">
+           <form action="/login" method="post">
+               <div class="form-group">
+                   <label>Email</label>
+                   <input type="text" class="form-control" name="email">
+               </div>
+               <div class="form-group">
+                   <label>Password</label>
+                   <input type="password" class="form-control" name="password">
+               </div>
+           <button type="submit" class="btn btn-default">Login</button>
+           </form>
+          </section>
+           <div class="loginFooter">
+                <a href="/signup" class="btn btn-default">Signup</a>
+                <a href="/" class="btn btn-default">Main Page</a>
+           </div>
+           <br>
+</div><!-- End of container/login content div -->
 
-        <div class="row" id="indexFooter" style="margin-left: 75%;">
-             <div class="col s12"><a href="/signup" class="btn btn-default">Signup</a>
-              <a href="/" class="btn btn-default">Home</a>
-          </div>
-          </div>
 
-          <!-- Compiled and minified JavaScript -->
+<!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 </body>
 </html>

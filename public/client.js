@@ -1,5 +1,11 @@
 $( document ).ready(function() {
 
+  $(window).scroll(function() {
+  var scrolledY = $(window).scrollTop();
+  $('#bgPicture').css('background-position', 'left ' + ((scrolledY)) + 'px');
+});
+
+
   var time = 0;
 
   $('ul.wm-services, ul.men-services').on('click', 'li', function() { //show cart when li is selected
