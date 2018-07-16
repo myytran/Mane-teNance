@@ -55,25 +55,25 @@ section{
 /* Style the footer */
 
 
-form-group {
+.form-group {
 color: black;
 margin: 20px;
 padding: 10px;
+text-align: left;
 
 }
+
 
 .form-group label {
   font-size: 25px;
   color: black;
 }
-
-input .form-contol {
-  color: black;
+.btn {
+background-color: black;
+letter-spacing: 2px;
 }
 
-
-
-button, a.btn.btn-default{
+a.btn.btn-default{
   margin-left: 10px;
   font-size: 20px;
   color: black;
