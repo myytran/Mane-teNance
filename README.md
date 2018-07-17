@@ -10,6 +10,8 @@ From the Login Page, one can utilize the demo account to use the app to see its 
 ![image](https://user-images.githubusercontent.com/27118458/42791802-675f4afe-8940-11e8-8a38-45ef8e8511c5.png)
 
 Once logged in, users can view the services offered and select them as needed. A cart will calculate the time accrued. When the user clicks Confirm on the cart, they will be directed to a schedule page to view a list of times available for them to book their appointment.
+![image](https://user-images.githubusercontent.com/27118458/42792175-16e24ef8-8942-11e8-9133-5c72c7e954c1.png)
+
 ![image](https://user-images.githubusercontent.com/27118458/42791911-dfbf122c-8940-11e8-90c7-cdb9754ae772.png)
 
 
