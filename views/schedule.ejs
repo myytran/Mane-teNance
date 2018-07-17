@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -33,25 +34,26 @@
 
 <div class="container">
   <div class="container text-center" id="container-overide-schedule-page">
-  <p>Now that you have selected your services, below are the days and times available for you to schedule your appointment! Simply select by clicking on the appropriate time and day for your hair appointment and you will be directed to a confirmation page of your Mane'tenance schedule!  </p>
+
+  <p><i class="medium material-icons">event_note</i> Now that you have selected your services, below are the days and times available for you to schedule your appointment! Simply select by clicking on the appropriate time and day for your hair appointment and you will be directed to a confirmation page of your Mane'tenance schedule!  </p>
 
 
-  </div><!--containertextcenter-->
 
-
-  <div class="columns" id="schedule-board">
-    <section>
+  <div class="container" id="schedule-board">
+    <div class="row">
     <h2>Dates & Times available</h2>
       <ul class="w3-ul w3-hoverable" >
           <% Object.keys(availability).forEach(function(key,index) { %>
             <% for(var i=0; i<availability[key].length; i++) {%>
               <% if(availability[key][i].available) { %>
-                <li><a class= "button" style="background-color: #eceff1;" href="/booking/<%=key%>T<%=availability[key][i].time%>-04:00/<%=time%>"><%=moment(key).format("dddd, MMMM Do, YYYY,  hh:mm A")%> - <%=availability[key][i].time%></a></li>
+                <li><a class= "button" href="/booking/<%=key%>T<%=availability[key][i].time%>-04:00/<%=time%>"><%=moment(key).format("dddd, MMMM Do, YYYY,  hh:mm")%> - <%=availability[key][i].time%></a></li>
               <% } %>
             <% } %>
           <% }); %>
       </ul>
-    </section>
+    </div>
+  </div>
+  </div>
   </div>
 </div> <!--jumbotron-->
 <!--JavaScript at end of body for optimized loading-->

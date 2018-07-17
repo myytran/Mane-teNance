@@ -9,10 +9,13 @@ $( document ).ready(function() {
   var time = 0;
 
   $('ul.wm-services, ul.men-services').on('click', 'li', function() { //show cart when li is selected
+
+
     $('#cart').show();
     $('#confirm-btn').show();//shows confirm button w/ endpoint to /Schedule
     $('#timeSum').show(); //shows time total for services
     $('#cartTimeBtn').show();
+    $(this).children('i.small.material-icons').remove();
     $(this).clone().appendTo($(`.cart`)).append('<i class="small material-icons">clear</i>');
 
    time += $(this).data('time');
