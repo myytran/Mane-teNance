@@ -17,7 +17,7 @@ body {
 
 #indexTitle {
   font-family: 'Montserrat', sans-serif;
-  font-size:40px;
+  font-size:45px;
   text-decoration: bold;
   text-align: center;
 
@@ -53,7 +53,9 @@ section{
 }
 
 /* Style the footer */
-
+.form-group placeholder{
+  color: silver;
+}
 
 .form-group {
 color: black;
