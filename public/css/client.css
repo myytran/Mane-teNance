@@ -20,8 +20,7 @@ nav {
 
 #indexTitle, #loginTitle, #signupTitle {
   font-family: 'Montserrat', sans-serif;
-  font-size:45px;
-  text-decoration: bold;
+  font-size:40px;
   text-align: center;
   margin: 0;
 
@@ -76,3 +75,15 @@ a.btn.btn-default{
   background-color:  white;
    margin-bottom: 10px;
 }
+
+
+   /* media queries */
+   @media (max-width: 370px) {  /* if viewport is less than or equal to 320px */
+      #indexTitle, #loginTitle, #signupTitle {
+         font-size:28px;
+      }
+
+      #indexContent, #loginContent, #signupContent {
+        font-size: 18px;
+      }
+   }
