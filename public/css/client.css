@@ -28,9 +28,7 @@ nav {
 }
 
 #indexContent, #loginContent, #signupContent {
-  padding: 8px;
-  text-align: center;
-  padding-bottom: 10px;
+text-align: center;
 
 }
 
@@ -62,7 +60,6 @@ text-align: left;
 
 }
 
-
 .form-group label {
   font-size: 25px;
   color: black;
@@ -77,5 +74,5 @@ a.btn.btn-default{
   font-size: 20px;
   color: black;
   background-color:  white;
-  letter-spacing: 2px;
+   margin-bottom: 10px;
 }
