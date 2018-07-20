@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> MANE'TENANCE</title>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
       <script src="/schedule.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
       <link rel="stylesheet" href="/css/schedule.css">
@@ -22,6 +22,7 @@
   <nav>
       <div class="nav-wrapper" id="nav-schedule">
         <h3 class="brand-logo center">Mane'tenance | Hair Schedule</h3>
+        <a href="/logout" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href = "/services"> Service Page</a></li>
           <li><a href="/dashboard"> Dashboard</a></li>
@@ -29,10 +30,13 @@
         </ul>
       </div>
     </nav>
+<ul class="sidenav" id="mobile-demo">
+      <li><a href = "/services"> Service Page</a></li>
+      <li><a href="/dashboard"> Dashboard</a></li>
+      <li><a href="/logout"> Logout</a></li>
+</ul>
 
-
-<div class="container">
-  <div class="container text-center" id="container-overide-schedule-page">
+  <div class="container text-center" id="container-schedule-page">
 
   <p><i class="medium material-icons">event_note</i> Now that you have selected your services, below are the days and times available for you to schedule your appointment! Simply select by clicking on the appropriate time and day for your hair appointment and you will be directed to a confirmation page of your Mane'tenance schedule!  </p>
 
@@ -53,8 +57,8 @@
     </div>
   </div>
   </div>
-  </div>
-</div> <!--jumbotron-->
+
+
 <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>

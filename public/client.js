@@ -1,9 +1,15 @@
 $( document ).ready(function() {
 
+  $('.sidenav').sidenav(); //sidenav initialization
   $(window).scroll(function() {
   var scrolledY = $(window).scrollTop();
   $('#bgPicture').css('background-position', 'left ' + ((scrolledY)) + 'px');
-});
+  });
+
+
+
+
+
 
 
   var time = 0;

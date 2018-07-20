@@ -36,10 +36,16 @@ background-color: RosyBrown;
   color: black;
 }
 
-#container-overide-schedule-page p {
-  font-size: 25px;
-  text-align: left;
-  margin-bottom: 40px;
+#container-db {
+padding-top: 50px;
+
+}
+
+#container-db li {
+  list-style: none;
+  border-style: solid ;
+  margin: 3px;
+  padding: 10px;
 }
 
 #schedule-board h2{
@@ -82,4 +88,162 @@ a.button {
     -moz-appearance: button;
     appearance: button;
     cursor: default;
+}
+
+@media (max-width: 1260px) {  /* if viewport is less than or equal to1250px */
+  #nav-dash, #nav-schedule, h3 {
+    font-size: 45px;
+    overflow: hidden;
+    height: 120px;
+    padding: 5px;
+}
+
+#container-schedule-page, #container-db {
+  margin-top: 40px;
+  padding: 10px;
+}
+
+
+
+}
+
+@media (max-width: 1024px) {
+  #nav-dash, #nav-schedule ul li a {
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+#nav-dash, #nav-confirm h3{
+  font-size: 20px;
+  height: 100px;
+}
+
+#container-db h3 {
+  font-size:30px;
+}
+
+#nav-mobile {
+  margin: 0;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#confirm-container, #container-db {
+  font-size: 20px;
+  width: 80%;
+}
+
+#container-db li {
+  font-size: 20px;
+}
+
+}
+@media (max-width: 703px) {
+
+  #nav-dash, #nav-confirm h3{
+    margin: 0;
+    font-size: 23px;
+    height: 100px;
+
+  }
+  }
+
+  #nav-confirm {
+    height: 95px;
+  }
+
+  p, ul li a{
+    font-size: 25px;
+  }
+
+  #nav-schedule h3 {
+    font-size: 30px;
+    overflow: hidden;
+    height: 120px;
+    margin: 5px;
+}
+
+#container-schedule-page {
+  margin-top: 40px;
+  padding: 10px;
+}
+}
+
+@media (max-width: 404px) {
+
+  #container-db h3 {
+    font-size:25px;
+  }
+
+  #container-db li {
+    font-size: 18px;
+  }
+
+  #confirm-container h3, b {
+    font-size: 20px;
+  }
+
+
+
+  #nav-dash, #nav-confirm h3{
+    font-size: 23px;
+    height: 100px;
+    padding: 3px;
+    margin: 0;
+  }
+
+  #nav-confirm {
+    height: 95px;
+  }
+
+
+  #nav-schedule h3 {
+    font-size: 30px;
+    overflow: hidden;
+    height: 120px;
+    margin: 4px;
+}
+
+#container-schedule-page {
+  margin-top: 40px;
+  padding: 10px;
+}
+}
+
+@media (max-width: 320px) {
+
+ #confirm-container h3, b {
+    font-size: 14px;
+    ;
+  }
+
+   #nav-confirm h3{
+    font-size:18px;
+    height: 78px;
+    margin: 2px;
+    padding-top: 12px;
+  }
+
+  #nav-dash h3 {
+    font-size:20px;
+  }
+
+  #container-db li {
+    font-size: 19px;
+  }
+
+  p, ul li a{
+    font-size: 18px;
+  }
+  #nav-schedule h3 {
+    font-size: 30px;
+    overflow: hidden;
+    height: 120px;
+    margin: 4px;
+}
+
+#container-schedule-page {
+  margin-top: 40px;
+  padding: 10px;
+}
 }
