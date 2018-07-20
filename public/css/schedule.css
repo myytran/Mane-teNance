@@ -56,10 +56,11 @@ color: black;
 background-color: RosyBrown;
 }
 
-#schedule-board li {
-  margin: 10px;
-  background-color: RosyBrown;
-  color: black;
+#schedule-board ul li a {
+margin: 10px;
+background-color: RosyBrown;
+color: black;
+cursor: pointer;
 }
 /* =========dashboard styling============*/
 p {
