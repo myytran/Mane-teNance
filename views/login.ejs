@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> MANE'TENANCE</title>
+  <!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="client.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="/css/client.css">
+</head>
+
+<body>
+
+  <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper" id="mainPageNav">
+              <h1 class="brand-logo center" id="loginTitle">LOG IN</h1>
+            </div>
+          </nav>
+  </div>
+
+  <div id="bgPicture"></div><!--div for background picture-->
+  <br>
+    <div class="container"  id="loginContent">
+      <div id="loginContent">
+              <section class="row">
+                <b>~Try it out!~</b>
+                <br>
+              <b>Email:</b> demo@gmail.com
+              <br>
+              <b>Password:</b> demo
+            </section>
+            </div>
+                  <% if (message.length > 0) { %>
+               <div class="alert alert-danger"><%= message %></div>
+
+           <% } %>
+           <section class="row">
+           <form action="/login" method="post">
+               <div class="form-group">
+                   <label>Email</label>
+                   <input type="text" class="form-control" name="email" placeholder="demo@gmail.com">
+               </div>
+               <div class="form-group">
+                   <label>Password</label>
+                   <input type="password" class="form-control" name="password" placeholder="demo">
+               </div>
+           <button type="submit" class="btn btn-default">Login</button>
+           </form>
+          </section>
+
+          <div class="footer" >
+            <a href="/signup" class="btn btn-default">Signup</a>
+            <a href="/" class="btn btn-default">Main Page</a>
+          </div>
+</div><!-- End of container/login content div -->
+
+
+<!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</body>
+</html>

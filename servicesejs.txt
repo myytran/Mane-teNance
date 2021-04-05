@@ -1,0 +1,54 @@
+<body>
+
+<div class="title-bar">
+    
+      
+</div>
+
+<!---new template -->
+<div class="row">
+    <p><h2>The services offered at Mane'teNance range from a simple one touch styling to intricate and multi-step colors - for both men and women. Simply click on the hair services button and choose by clicking on the services! A cart will appear once you pick your first service. You may add as many as you like and delete any service as necessary. You will be able to schedule an appointment once you finish choosing your service(s) and clicking Confirm - getting one step closer to your new and  fresh look!  </h2></p>
+      <div class="column">
+          <button class="wm-btn">Women Hair Services</button>
+              
+      </div>
+
+
+      <div class="column">
+      <button class="men-btn">Men Hair Services</button>
+          <div id="men-services">
+            <ul class="men-services">
+             <li data-time="30" data-price="65">Designer Haircut</li>
+             <li data-time="30" data-price="50">Barber Cut</li>
+             <li data-time="45" data-price="45">Grey Hair Blending</li>
+             <li data-time="45" data-price="50">Root Retouch Color</li>
+             <li data-time="45" data-price="60">Partial Balayage HiLights</li>
+             <li data-time="45" data-price="60">Partial HiLights</li>
+             <li data-time="45" data-price="60">Partial HiLights</li>
+             <li data-time="15" data-price="10">Clipper Clean Up</li>
+           </ul>
+            </div>
+      </div>
+
+  <div class="column">
+      <div id="cart">
+        <h4>CART</h4>
+          <ul class="cart"></ul>
+        </div>
+
+      <div id="timeSum" >
+      <p class="totalTime"></p>
+      </div>
+        <div id= "cartTimeBtn"><p>Please confirm your service time needed.</p>
+          <form action="/schedule/time" method="post">
+            <input type="hidden" name="time">
+            <button type="submit">Confirm</button>
+          </form>
+        </div>
+  </div>
+
+
+</div> <!--end of row div-->
+
+
+</body>
